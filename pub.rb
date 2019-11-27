@@ -8,10 +8,13 @@ class Pub
     @price = price
   end
 
-
-
   def increase_till_cash(drink)
     @total_till_cash += drink.price
+  end
+
+  def of_age_to_drink?(customer)
+    return true if customer.age >= 18
+    return false
   end
 
 

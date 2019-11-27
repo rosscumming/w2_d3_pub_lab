@@ -28,5 +28,22 @@ class PubTest < MiniTest::Test
     assert_equal(103, @pub.increase_till_cash(@drink2))
   end
 
+  def test_is_of_age_to_drink_when_exactly_18_returns_true
+    customer_whos_18 = Customer.new("Alex", 100, 18)
+    assert_equal(true, @pub.of_age_to_drink?(customer_whos_18))
+  end
+
+  def test_is_of_age_to_drink_when_over_18_returns_true
+    customer_whos_19 = Customer.new("Alex", 100, 19)
+    assert_equal(true, @pub.of_age_to_drink?(customer_whos_19))
+  end
+
+  def test_is_of_age_to_drink_when_under_18_returns_false
+    customer_whos_17 = Customer.new("Alex", 100, 17)
+    assert_equal(false, @pub.of_age_to_drink?(customer_whos_17))
+  end
+
+
+
 
 end

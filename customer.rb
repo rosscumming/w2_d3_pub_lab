@@ -1,19 +1,20 @@
 class Customer
 
-  attr_reader :name, :wallet
+  attr_reader :name, :wallet, :age
 
-  def initialize(name, wallet)
+  def initialize(name, wallet, age)
     @name = name
     @wallet = wallet
+    @age = age
   end
 
-  # def drink_purchased(price)
-  #   @cash -= @drinks.price
-  # end
-  #
 
   def reduce_cash(drink)
     @wallet -= drink.price
+  end
+
+  def return_customer_age
+    @age
   end
 
 
