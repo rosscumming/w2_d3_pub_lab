@@ -22,7 +22,7 @@ class CustomerTest < MiniTest::Test
   end
 
   def test_customer_has_cash
-    assert_equal(100, @customer.customer_cash)
+    assert_equal(100, @customer.wallet)
   end
   #
   # def test_customer_can_buy_drink
