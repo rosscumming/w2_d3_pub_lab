@@ -16,6 +16,16 @@ class Pub
     return true if customer.age >= 18
     return false
   end
+  #
+  # def serve_drink_if_18(customer)
+  #   of_age_to_drink?(customer)
+  #     price.delete(1)
+  # end
+
+
+  #
+  # if customer.age >= 18
+  #   @pub.pop()
 
 
 end

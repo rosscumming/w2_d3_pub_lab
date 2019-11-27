@@ -42,7 +42,11 @@ class PubTest < MiniTest::Test
     customer_whos_17 = Customer.new("Alex", 100, 17)
     assert_equal(false, @pub.of_age_to_drink?(customer_whos_17))
   end
-
+  #
+  # def test_serve_drink_if_exactly_18_returns_true
+  #   customer_whos_18 = Customer.new("Alex", 100, 18)
+  #   assert_equal(@drink1, @pub.serve_drink_if_18(customer_whos_18))
+  # end
 
 
 
